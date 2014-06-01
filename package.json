@@ -1,5 +1,5 @@
 {
-  "name": "Hyphenator",
+  "name": "hyphenator",
   "description": "Pattern-based word hypenation for counting syllables fast!",
   "version": "0.0.1",
   "keywords": [
