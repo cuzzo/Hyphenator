@@ -1,13 +1,13 @@
 {
   "name": "hyphenator",
   "description": "Pattern-based word hypenation for counting syllables fast!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "phonetics",
     "syllables",
     "nlp"
   ],
-  "homepage": "https://github.com/cuzzo/hypenator",
+  "homepage": "https://github.com/cuzzo/Hypenator",
   "licenses": [
     {
       "type": "BSD",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cuzzo/hypenator"
+    "url": "https://github.com/cuzzo/Hypenator.git"
   },
   "dependencies": {
     "underscore": "~1.6.0"
