@@ -29,8 +29,8 @@ var Hyphenator = function(patterns, exceptions) {
   this._insert_pattern = function(pat) {
     var chars = pat.replace(DRGX, ""),
         points = pat.split(ACRGX).map(function(h) { return parseInt(h) || 0 }),
-        c = "";
-    var t = this.tree;
+        c = "",
+        t = this.tree;
 
     for (var i = 0; i < chars.length; i++) {
       c = chars.charAt(i);
@@ -77,34 +77,33 @@ var Hyphenator = function(patterns, exceptions) {
 
         for (var n = 0; n < sub_work.length; n++) {
           c = sub_work[n];
+          if (!(c in t)) break;
 
-          if (c in t) {
-            t = t[c];
-            if (null in t) {
-              var p = t[null];
-              for (var j = 0; j < p.length; j++) {
-                points[i + j] = Math.max(points[i + j], p[j]);
-              }
-            }
-          }
-          else {
-            break;
+          t = t[c];
+          if (!(null in t)) continue;
+
+          var p = t[null];
+          for (var j = 0; j < p.length; j++) {
+            points[i + j] = Math.max(points[i + j], p[j]);
           }
         }
       }
       points[1] = points[2] = points[points.length - 2] = points[points.length - 3] = 0
     }
 
-    var pieces = [""];
-    var zipped = _.zip(word, points.slice(2, points.length - 1));
+    var pieces = [""],
+        zipped = _.zip(word, points.slice(2, points.length - 1));
+
     zipped.forEach(function(z) {
       var c = z[0],
           p = z[1];
+
       pieces[pieces.length - 1] += c;
       if (p % 2) {
         pieces.push("");
       }
     });
+
     return pieces;
   };
 
