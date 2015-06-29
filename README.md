@@ -16,7 +16,7 @@ $ /path/to/hyphenator "WORDS I WANT TO HYPHENATE!"
 Acknowledgements
 ----------------
 
-* [Word Hy-phen-a-tion by Com-put-er](http://www.tug.org/docs/liang/) - The thesis by Eric Liang makes this possible.
+* [Word Hy-phen-a-tion by Com-put-er](http://www.tug.org/docs/liang/) - The thesis by Frank Liang makes this possible.
 * [Python Hyphenation](http://nedbatchelder.com/code/modules/hyphenate.py) - Ned Batchelder implemented this first in a reasonable language, making my job pretty much a simple translation.
 
 License
