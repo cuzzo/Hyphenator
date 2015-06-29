@@ -6,7 +6,7 @@ Watson can tell you how tall Ke$ha is. It's time your computer can tell you how 
 Usage
 -----
 
-Hyphenator has one usage, phonetics. Primarily, this is useful for counting syllables quickly. But it could be used for other phonetic applications that need a speed up.
+Hyphenator has one usage: phonetics. Primarily, this is useful for counting syllables quickly. But it could be used for other phonetic applications that need a speed up.
 
 ```bash
 $ /path/to/hyphenator "WORDS I WANT TO HYPHENATE!"
